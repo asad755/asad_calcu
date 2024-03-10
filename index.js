@@ -1,5 +1,7 @@
-import inquirer from "inquirer";
-const answers = await inquirer.prompt([
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var inquirer_1 = require("inquirer");
+var answers = await inquirer_1.default.prompt([
     {
         type: "number",
         name: "numberOne",
@@ -17,9 +19,9 @@ const answers = await inquirer.prompt([
         message: "select Operator:"
     },
 ]);
-const { numberOne, numberTwo, operator } = answers;
+var numberOne = answers.numberOne, numberTwo = answers.numberTwo, operator = answers.operator;
 if (numberOne && numberTwo && operator) {
-    let result = 0;
+    var result = 0;
     if (operator === "*") {
         result = numberOne * numberTwo;
     }
